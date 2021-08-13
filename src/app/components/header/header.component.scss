@@ -1,0 +1,54 @@
+@import '../../../styles/constants', '../../../styles/colors';
+
+:host {
+  height: $row-height;
+}
+
+@mixin activeTile {
+  &.active{
+    position: relative;
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      border-bottom: 2px solid $text;
+    }
+  }
+}
+
+.header {
+  width: inherit;
+  height: inherit;
+  background: $bg-darken;
+  &-nav {
+    &-item {
+      @include activeTile;
+      display: inline-block;
+      &:hover {
+        background-color: $bg-darken;
+        filter: invert(15%);
+      }
+    }
+    &-link {
+      display: block;
+      padding: 0 $main-indent;
+      line-height: $row-height;
+    }
+  }
+  &-search {
+    &-wrapp { @include activeTile; }
+    width: 100%;
+    font-size: 1em;
+    padding: 0 $main-indent;
+    line-height: $row-height;
+    // background-color: $;
+    color: $text;
+    &::placeholder {
+      color: $text-darken;
+      font-style: italic;
+    }
+  }
+}

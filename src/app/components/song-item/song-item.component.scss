@@ -1,0 +1,52 @@
+@import '../../../styles/colors', '../../../styles/constants';
+
+.song {
+  &-card {
+    position: relative;
+    max-width: 300px;
+    max-height: 300px;
+    overflow: hidden;
+
+    border: 1px solid $bg-darken;
+    border-radius: $main-radius;
+    
+    &-info {
+      position: absolute;
+      left: 0;
+      right: 0;
+      padding: {
+        top: $main-indent * 2;
+        left: $main-indent;
+        right: $main-indent;
+        bottom: $main-indent;
+      };
+      background: linear-gradient(to top, $black, transparent);
+      filter: blur(5);
+      bottom: -25%;
+      opacity: 0;
+      transition: $main-transition;
+    }
+    &-controls {
+      position: absolute;
+      right: $main-indent * 2 - $player-control-btn-size / 2.5;
+      bottom: $main-indent * 2 - $player-control-btn-size / 2.2;
+    }
+
+    &:hover {
+      box-shadow: 0 3px 5px transparentize($bg-darken, .6);
+      .song-card-info {
+        bottom: 0;
+        opacity: 1;
+      }
+    }
+  }
+
+  &-title {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: $text;
+  }
+  &-description {
+    color: $text-darken;
+  }
+}

@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500&display=swap');
+@import 'colors', 'template', 'constants';
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Ubuntu', sans-serif;
+  background-color: $bg;
+  color: $text;
+}
+
+a {
+  color: $text;
+  text-decoration: none;
+}
+
+ul, input {
+  &.clear {
+    list-style: none;
+    background-color: transparent;
+    border: none;
+    font: inherit;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.p {
+  padding: $main-indent;
+
+  &t { padding-top: $main-indent; }
+  &b { padding-bottom: $main-indent; }
+  &l { padding-left: $main-indent; }
+  &r { padding-right: $main-indent; }
+  &x { padding: 0 $main-indent; }
+  &y { padding: $main-indent 0; }
+}
+.m {
+  margin: $main-indent;
+
+  &t { margin-top: $main-indent; }
+  &b { margin-bottom: $main-indent; }
+  &l { margin-left: $main-indent; }
+  &r { margin-right: $main-indent; }
+  &x { margin: 0 $main-indent; }
+  &y { margin: $main-indent 0; }
+}
+
+.text-right {
+  text-align: right;
+}
+
+div.center {
+  margin: 0 auto;
+}
+
+hr {
+  border-color: $text-darken;
+  margin: $main-indent 0;
+}

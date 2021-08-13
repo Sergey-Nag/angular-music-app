@@ -1,0 +1,21 @@
+<header class="d-flex space-between header">
+  <div class="col-2"></div>
+  <div class="col-5">
+    <div class="header-search-wrapp active">
+      <input type="text" class="clear header-search" placeholder="type to search...">
+    </div>
+  </div>
+  <div class="col-3">
+    <ul class="clear header-nav text-right pr">
+      <li class="header-nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+        <a class="header-nav-link" routerLink="/">Home</a>
+      </li>
+      <li class="header-nav-item" routerLinkActive="active">
+        <a class="header-nav-link" routerLink="/artists">Artists</a>
+      </li>
+      <!-- <li class="header-nav-item" routerLinkActive="active">
+        <a class="header-nav-link" routerLink="/albums">Albums</a>
+      </li> -->
+    </ul>
+  </div>
+</header>

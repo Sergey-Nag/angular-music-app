@@ -1,0 +1,10 @@
+@import '../../../styles/constants', '../../../styles/colors';
+@import './styles/player-control.scss';
+
+:host {
+  height: $row-height;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}

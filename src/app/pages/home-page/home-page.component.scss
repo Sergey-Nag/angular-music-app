@@ -1,0 +1,7 @@
+@import '../../../styles/constants';
+
+.home {
+  &-row {
+    margin: $main-indent * 2 0;
+  }
+}

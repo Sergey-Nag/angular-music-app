@@ -1,0 +1,31 @@
+@mixin backgroundImage($imageName) {
+  background-image: url('../../../../assets/icons/#{$imageName}');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: $player-control-btn-icon-size;
+}
+
+.player-control {
+  width: $player-control-btn-size;
+  height: $player-control-btn-size;
+  background-color: $player-control-btn;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  opacity: .8;
+  transition: $main-transition;
+
+  &:hover {
+    opacity: 1;
+  }
+  &:active {
+    transform: scale(.95);
+  }
+
+  &-play {
+    @include backgroundImage('play-circle.svg');
+  }
+  &-pause {
+    @include backgroundImage('pause-circle.svg');
+  }
+}

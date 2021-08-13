@@ -1,0 +1,44 @@
+@use "sass:math";
+@import '../styles/constants';
+
+.d-flex {
+  display: flex;
+  flex-direction: row;
+  
+  &.column {
+    flex-direction: column;
+  }
+  &.stretch {
+    justify-content: stretch;
+    align-items: stretch;
+  }
+  &.space-between {
+    justify-content: space-between;
+  }
+  &.center {
+    justify-content: center;
+  }
+  &.start {
+    justify-content: flex-start;
+  }
+  &.end {
+    justify-content: flex-end;
+  }
+
+  & .grow {
+    flex-grow: 1;
+  }
+
+  // .col-10 = 100%;
+  // .col-1 = 10%
+  .col {
+    @for $i from 10 through 1 {
+      &-#{$i} { width: $i * 10%; }
+    }
+  }
+}
+
+.container {
+  width: 1300px;
+  padding: $main-indent 0;
+}
